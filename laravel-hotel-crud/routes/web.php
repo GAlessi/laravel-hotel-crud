@@ -9,3 +9,9 @@ Route::get('/home', 'MainController@home')
 //Singolo impiegato
 Route::get('/employee/show/{id}', 'MainController@show')
 -> name('show');
+
+// modifica elemento
+Route::get('edit/employee/{id}', 'MainController@edit')
+-> name('edit');
+Route::post('update/employee/{id}', 'MainController@update')
+-> name('update');
