@@ -7,20 +7,23 @@
 
     header{
         padding: 30px;
-        background-color: grey;
+        background-color: rgb(223, 223, 223);
         width: 100%;
         text-align: center;
         a{
             padding: 20px;
             margin: 20px;
-            background-color: red;
+            background-color: rgb(141, 5, 5);
+            color: white;
+            text-decoration: none;
+            border-radius: 10px;
 
         }
     }
 
     main{
         flex-grow: 1;
-
+        
         ul{
             list-style: none;
 
@@ -29,5 +32,12 @@
                 color: black;
             }
         }
+    }
+
+    footer{
+        background-color: rgb(223,223,223);
+        width: 100%;
+        text-align: center;
+
     }
 }
