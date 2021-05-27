@@ -4,7 +4,7 @@
         <ul>
             @foreach ($employees as $employee)
                 <li>
-                    <a href="#">
+                    <a href="{{ route('show', $employee -> id) }}">
                         {{$employee -> firstname}}
                         {{$employee -> lastname}}
                     </a>
