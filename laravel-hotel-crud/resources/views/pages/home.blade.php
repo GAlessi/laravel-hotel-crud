@@ -11,7 +11,7 @@
                     <a href="{{route('edit', $employee -> id)}}">
                         &#9998;
                     </a>
-                    <a href="#">
+                    <a href="{{route('destroy', $employee -> id)}}">
                         &#10060;
                     </a>
                 </li>

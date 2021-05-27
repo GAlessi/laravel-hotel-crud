@@ -7,12 +7,15 @@ use App\Employee;
 
 class MainController extends Controller
 {
+
+//home
     public function home()
     {
         $employees = Employee::all();
         return view('pages.home', compact('employees'));
     }
 
+//show singolo elemento
     public function show($id)
     {
         $employee = Employee::findOrFail($id);
@@ -20,6 +23,7 @@ class MainController extends Controller
     }
 
 
+//modifica elemento
     public function edit($id)
     {
         $employee = Employee::findOrFail($id);
@@ -38,5 +42,13 @@ class MainController extends Controller
         $employee = Employee::findOrFail($id);
         $employee -> update($validData);
         return redirect() -> route('show', $employee -> id);
+    }
+
+    //elimina elemento
+    public function destroy($id)
+    {
+        $employee = Employee::findOrFail($id);
+        $employee -> delete();
+        return redirect() -> route('home');
     }
 }
