@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    min-height: 100vh;
+
+    header{
+        padding: 30px;
+        background-color: grey;
+        width: 100%;
+        text-align: center;
+        a{
+            padding: 20px;
+            margin: 20px;
+            background-color: red;
+
+        }
+    }
+
+    main{
+        flex-grow: 1;
+
+        ul{
+            list-style: none;
+
+            a{
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+}
