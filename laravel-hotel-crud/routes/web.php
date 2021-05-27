@@ -19,3 +19,9 @@ Route::post('update/employee/{id}', 'MainController@update')
 //eliminare elemento
 Route::get('destroy/{id}', 'MainController@destroy')
 -> name('destroy');
+
+//aggiungere elemento
+Route::get('/employee/create', 'MainController@create')
+-> name('create');
+Route::post('/employee/store', 'MainController@store')
+-> name('store');

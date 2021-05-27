@@ -51,4 +51,26 @@ class MainController extends Controller
         $employee -> delete();
         return redirect() -> route('home');
     }
+
+    //crea nuovo elemento
+    public function create()
+    {
+        return view('pages.create');
+    }
+
+    public function store(Request $request) {
+        // dd($request -> all());
+
+        $validData = $request -> validate([
+            'firstname' => 'required|string',
+            'lastname' => 'required|string',
+            'role' => 'required|string',
+            'ral' => 'required|integer'
+        ]);
+
+        // dd($validate);
+        $employee = Employee::create($validData);
+        return redirect() -> route('show', $employee -> id);
+
+    }
 }
