@@ -5,7 +5,8 @@
             @foreach ($employees as $employee)
                 <li>
                     <a href="#">
-                        {{$employee -> name}}
+                        {{$employee -> firstname}}
+                        {{$employee -> lastname}}
                     </a>
                     <a href="#">
                         &#9998;
