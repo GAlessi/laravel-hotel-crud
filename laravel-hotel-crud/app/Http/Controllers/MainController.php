@@ -36,7 +36,7 @@ class MainController extends Controller
             'firstname' => 'required|string',
             'lastname' => 'required|string',
             'role' => 'required|string',
-            'ral' => 'required|integer'
+            'ral' => 'nullable|integer'
         ]);
 
         $employee = Employee::findOrFail($id);
